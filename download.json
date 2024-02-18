@@ -1,0 +1,20 @@
+{
+  "run": [{
+    "method": "input",
+    "params": {
+      "title": "Download",
+      "form": [{
+        "key": "name",
+        "title": "model name (discover at https://ollama.ai/library)"
+      }]
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "ollama pull {{input.name}}"
+    }
+  }, {
+    "method": "input",
+    "params": { "title": "Download Finished", "description": "Go back to the dashboard and launch the app!" }
+  }]
+}
