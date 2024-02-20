@@ -11,6 +11,18 @@ module.exports = {
       "dest": "app/.env"
     }
   }, {
+    "method": "fs.copy",
+    "params": {
+      "src": "start.bat",
+      "dest": "app/backend/s.bat"
+    }
+  }, {
+    "method": "fs.copy",
+    "params": {
+      "src": "start.sh",
+      "dest": "app/backend/s.sh"
+    }
+  }, {
     "method": "shell.run",
     "params": {
       "message": [
