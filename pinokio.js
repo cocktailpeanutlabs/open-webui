@@ -2,7 +2,7 @@ const path = require('path')
 module.exports = {
   version: "1.2",
   title: "Open WebUI",
-  description: "ChatGPT-Style WebUI for Ollama (Formerly Ollama WebUI)",
+  description: "ChatGPT-Style WebUI for Ollama (Formerly Ollama WebUI) https://github.com/open-webui/open-webui",
   icon: "icon.png",
   menu: async (kernel) => {
     let names
