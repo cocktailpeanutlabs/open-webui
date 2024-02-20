@@ -1,5 +1,10 @@
 {
   "run": [{
+    "method": "local.set",
+    "params": {
+      "name": "{{input.name}}"
+    }
+  }, {
     "method": "input",
     "params": {
       "title": "Download",
@@ -11,7 +16,7 @@
   }, {
     "method": "shell.run",
     "params": {
-      "message": "ollama pull {{input.name}}"
+      "message": "ollama pull {{local.name}}"
     }
   }, {
     "method": "input",
