@@ -7,7 +7,7 @@ module.exports = {
   }, {
     "method": "fs.copy",
     "params": {
-      "src": "app/example.env",
+      "src": "app/.env.example",
       "dest": "app/.env"
     }
   }, {
