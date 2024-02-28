@@ -5,20 +5,6 @@ module.exports = {
   description: "ChatGPT-Style WebUI for Ollama (Formerly Ollama WebUI) https://github.com/open-webui/open-webui",
   icon: "icon.png",
   menu: async (kernel) => {
-    let names
-    if (kernel.jsdom) {
-      let JSDOM = kernel.jsdom.JSDOM
-      let dom = await JSDOM.fromURL("https://ollama.com/library")
-      let els = dom.window.document.querySelectorAll("#repo li a")
-      let urls = []
-      names = []
-      for(let el of els) {
-        urls.push(el.href)
-        names.push(new URL(el.href).pathname.split("/").filter(x => x)[1])
-      }
-      console.log("names", names)
-    }
-
     let installing = await kernel.running(__dirname, "install.js")
     let installed = await kernel.exists(__dirname, "app", "backend", "env")
     let running = await kernel.running(__dirname, "start.js")
@@ -41,22 +27,6 @@ module.exports = {
             text: "Terminal",
             href: "start.js",
           }]
-          if (names) {
-            o.push({
-              icon: "fa-solid fa-circle-down",
-              text: "Download Models",
-              menu: names.map((name) => {
-                return {
-                  icon: "fa-solid fa-circle-down",
-                  text: name,
-                  href: "down.json",
-                  params: {
-                    name
-                  }
-                }
-              })
-            })
-          }
           return o
         } else {
           return [{
@@ -71,27 +41,7 @@ module.exports = {
           text: "Start",
           href: "start.js",
         }]
-        if (names) {
-          o.push({
-            icon: "fa-solid fa-circle-down",
-            text: "Download Models",
-            menu: names.map((name) => {
-              return {
-                icon: "fa-solid fa-circle-down",
-                text: name,
-                href: "down.json",
-                params: {
-                  name
-                }
-              }
-            })
-          })
-        }
         o = o.concat([{
-          icon: "fa-solid fa-file-lines",
-          text: "index",
-          href: "download.html?raw=true"
-        }, {
           icon: "fa-solid fa-plug",
           text: "Update",
           href: "update.js",
