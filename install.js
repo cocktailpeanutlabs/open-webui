@@ -2,7 +2,7 @@ module.exports = {
   "run": [{
     "method": "shell.run",
     "params": {
-      "message": "git clone -b dev https://github.com/open-webui/open-webui app"
+      "message": "git clone https://github.com/open-webui/open-webui app"
     }
   }, {
     "method": "fs.copy",
