@@ -2,7 +2,7 @@ const path = require('path')
 module.exports = {
   version: "1.2",
   title: "Open WebUI",
-  description: "ChatGPT-Style WebUI for Ollama (Formerly Ollama WebUI) https://github.com/open-webui/open-webui",
+  description: "User-friendly WebUI for LLMs, supported LLM runners include Ollama and OpenAI-compatible APIs https://github.com/open-webui/open-webui",
   icon: "icon.png",
   menu: async (kernel) => {
     let installing = await kernel.running(__dirname, "install.js")
