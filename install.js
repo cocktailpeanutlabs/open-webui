@@ -35,9 +35,7 @@ module.exports = {
     "method": "shell.run",
     "params": {
       "message": [
-        "pip install -r requirements.txt",
-        "pip install langchain==0.1.6",
-        "pip install langchain-community==0.0.19"
+        "pip install -r requirements.txt"
       ],
       "venv": "env",
       "path": "app/backend"
