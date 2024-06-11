@@ -22,7 +22,7 @@ module.exports = async (kernel) => {
         },
         "venv": "env",
         //"message": "{{platform === 'win32' ? 's.bat' : 'bash s.sh'}}",
-        "message": "{{platform === 'win32' ? 'start_windows.bat' : 'bash s.sh'}}",
+        "message": "{{platform === 'win32' ? 'start_windows.bat' : 'bash start.sh'}}",
         "on": [{ "event": "/http://[0-9.:]+/", "done": true }]
       }
     }, {
