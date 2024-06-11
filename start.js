@@ -30,12 +30,12 @@ module.exports = async (kernel) => {
       "params": {
         "url": "{{input.event[0]}}"
       }
-  //  }, {
-  //    "method": "proxy.start",
-  //    "params": {
-  //      "uri": "{{local.url}}",
-  //      "name": "Local Sharing"
-  //    }
+    }, {
+      "method": "proxy.start",
+      "params": {
+        "uri": "{{local.url}}",
+        "name": "Local Sharing"
+      }
     }]
   }
 }
