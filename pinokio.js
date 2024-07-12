@@ -10,7 +10,7 @@ module.exports = {
     let running = await kernel.running(__dirname, "start.js")
     if (installing) {
       return [{
-        torch: true,
+        default: true,
         icon: "fa-solid fa-plug",
         text: "Installing",
         href: "install.js",
@@ -20,7 +20,7 @@ module.exports = {
         let local = kernel.memory.local[path.resolve(__dirname, "start.js")]
         if (local && local.url) {
           let o = [{
-            torch: true,
+            default: true,
             icon: "fa-solid fa-rocket",
             text: "Open Web UI",
             href: local.url,
@@ -32,7 +32,7 @@ module.exports = {
           return o
         } else {
           return [{
-            torch: true,
+            default: true,
             icon: 'fa-solid fa-terminal',
             text: "Terminal",
             href: "start.js",
@@ -40,7 +40,7 @@ module.exports = {
         }
       } else {
         let o = [{
-          torch: true,
+          default: true,
           icon: "fa-solid fa-power-off",
           text: "Start",
           href: "start.js",
@@ -62,7 +62,7 @@ module.exports = {
       }
     } else {
       return [{
-        torch: true,
+        default: true,
         icon: "fa-solid fa-plug",
         text: "Install",
         href: "install.js",
