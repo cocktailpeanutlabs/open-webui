@@ -4,6 +4,12 @@ module.exports = {
   title: "Open WebUI",
   description: "User-friendly WebUI for LLMs, supported LLM runners include Ollama and OpenAI-compatible APIs https://github.com/open-webui/open-webui",
   icon: "icon.png",
+  pre: [{
+    icon: "ollama.png",
+    title: "Ollama",
+    description: "Get up and running with large language models.",
+    href: "https://ollama.com/"
+  }],
   menu: async (kernel) => {
     let installing = await kernel.running(__dirname, "install.js")
     let installed = await kernel.exists(__dirname, "app", "backend", "env")
